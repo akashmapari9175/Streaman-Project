@@ -1,0 +1,10 @@
+{
+  "name": "streaman-project",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:next && npm run build:docs",
+    "build:next": "cd packages/next-app && npm install && npm run build",
+    "build:docs": "cd packages/docusaurus-app && npm install && npm run build",
+    "postbuild": "echo 'Build completed! No extra move needed.'"
+  }
+}

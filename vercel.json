@@ -1,8 +1,15 @@
 {
-  "projects": [
+  "version": 2,
+  "builds": [
     {
-      "src": "packages/next-app",
+      "src": "packages/next-app/**",
       "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "packages/next-app/$1"
     }
   ]
 }
